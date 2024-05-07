@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./global.css";
 import Profile from "./_root/Profile";
 import LoginForm from "./_auth/forms/LoginForm";
@@ -17,6 +17,7 @@ function App() {
 
         {/* Private route */}
         <Route path="/profile" element={<Profile />} />
+        <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </main>
   );
